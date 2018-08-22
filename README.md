@@ -1,13 +1,19 @@
-# Jekyll Extension for Visual Studio Code
+# Jekyll extension for Visual Studio Code
 
-This extensions adds [problem
+A [Visual Studio Code](https://code.visualstudio.com) extension that adds
+[problem
 matchers](https://code.visualstudio.com/docs/editor/tasks#_processing-task-output-with-problem-matchers)
 for Jekyll Liquid warnings and errors.
 
 ## Usage
 
-You can enable these problem matchers by using their names `"$jekyll-warning"`
-and `"$jekyll-error"`, or (for background tasks) `"$jekyll-warning-watch"` and
+Use these problem matchers in [Visual Studio Code
+tasks](https://code.visualstudio.com/docs/editor/tasks) by using their names
+`"$jekyll-warning"` and `"$jekyll-error"`.
+
+For [background
+tasks](https://code.visualstudio.com/docs/editor/tasks#_background-watching-tasks)
+such as `jekyll serve`, use `"$jekyll-warning-watch"` and
 `"$jekyll-error-watch"`.
 
 For example, a Jekyll project might define the following tasks in
