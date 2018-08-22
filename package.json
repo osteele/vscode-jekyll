@@ -1,0 +1,65 @@
+{
+  "name": "jekyll",
+  "displayName": "Jekyll",
+  "description": "Problem Matchers for Jekyll output",
+  "version": "0.1.0",
+  "publisher": "osteele",
+  "engines": {
+    "vscode": "^1.26.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github:osteele/vscode-jekyll-tasks"
+  },
+  "homepage": "https://github.com/osteele/vscode-jekyll-tasks",
+  "keywords": [
+    "jekyll",
+    "github pages"
+  ],
+  "contributes": {
+    "problemMatchers": [
+      {
+        "name": "jekyll-warning",
+        "owner": "jekyll",
+        "severity": "warning",
+        "fileLocation": "relative",
+        "pattern": {
+          "regexp": "^\\s*Liquid Warning: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
+          "line": 1,
+          "message": 2,
+          "file": 3
+        }
+      },
+      {
+        "name": "jekyll-error",
+        "owner": "jekyll",
+        "severity": "error",
+        "fileLocation": "relative",
+        "pattern": {
+          "regexp": "^\\s*Liquid Exception: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
+          "line": 1,
+          "message": 2,
+          "file": 3
+        }
+      },
+      {
+        "name": "jekyll-warning-watch",
+        "base": "$jekyll-warning",
+        "background": {
+          "activeOnStart": true
+        }
+      },
+      {
+        "name": "jekyll-error-watch",
+        "base": "$jekyll-error",
+        "background": {
+          "activeOnStart": true
+        }
+      }
+    ]
+  }
+}
