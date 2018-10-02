@@ -19,7 +19,7 @@ such as `jekyll serve`, use `"$jekyll-warning-watch"` and
 For example, a Jekyll project might define the following tasks in
 `.vscode/tasks.json`:
 
-```json
+```jsonc
 {
   // See https://go.microsoft.com/fwlink/?LinkId=733558
   // for the documentation about the tasks.json format
