@@ -29,10 +29,10 @@
         "severity": "warning",
         "fileLocation": "relative",
         "pattern": {
-          "regexp": "^\\s*Liquid Warning: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
-          "line": 1,
-          "message": 2,
-          "file": 3
+          "regexp": "^\\s*Liquid Warning: Liquid (?:syntax )?error \\((.*) line ([0-9]{1,})\\): (.*)$",                
+          "line": 2,
+          "message": 3,
+          "file": 1
         }
       },
       {
@@ -41,24 +41,28 @@
         "severity": "error",
         "fileLocation": "relative",
         "pattern": {
-          "regexp": "^\\s*Liquid Exception: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
-          "line": 1,
-          "message": 2,
-          "file": 3
+          "regexp": "^\\s*Liquid Exception: Liquid (?:syntax )?error \\((.*) line ([0-9]{1,})\\): (.*)$",                
+          "line": 2,
+          "message": 3,
+          "file": 1
         }
       },
       {
         "name": "jekyll-warning-watch",
         "base": "$jekyll-warning",
         "background": {
-          "activeOnStart": true
+          "activeOnStart": true,
+          "beginsPattern": "^\\s+Regenerating:\\s\\d{1,4}\\sfile\\(s\\)\\schanged\\sat\\s[12][0-9]{3}-[01][0-9]-[0123][0-9]\\s.*$",
+          "endsPattern": "^\\s+\\.\\.\\.done\\sin\\s\\d{1,}\\.\\d{4,}\\sseconds\\..*$|^\\s+Error:\\sRun\\sjekyll\\sbuild\\s--trace\\sfor\\smore\\sinformation\\..*$"
         }
       },
       {
         "name": "jekyll-error-watch",
         "base": "$jekyll-error",
         "background": {
-          "activeOnStart": true
+          "activeOnStart": true,
+          "beginsPattern": "^\\s+Regenerating:\\s\\d{1,4}\\sfile\\(s\\)\\schanged\\sat\\s[12][0-9]{3}-[01][0-9]-[0123][0-9]\\s.*$",
+          "endsPattern": "^\\s+\\.\\.\\.done\\sin\\s\\d{1,}\\.\\d{4,}\\sseconds\\..*$|^\\s+Error:\\sRun\\sjekyll\\sbuild\\s--trace\\sfor\\smore\\sinformation\\..*$"
         }
       }
     ]
