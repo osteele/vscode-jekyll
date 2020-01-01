@@ -29,10 +29,10 @@
         "severity": "warning",
         "fileLocation": "relative",
         "pattern": {
-          "regexp": "^\\s*Liquid Warning: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
-          "line": 1,
-          "message": 2,
-          "file": 3
+          "regexp": "^\\s*Liquid Warning: Liquid (?:syntax )?error \\((.*) line ([0-9]{1,})\\): (.*)$",                
+          "line": 2,
+          "message": 3,
+          "file": 1
         }
       },
       {
@@ -41,10 +41,10 @@
         "severity": "error",
         "fileLocation": "relative",
         "pattern": {
-          "regexp": "^\\s*Liquid Exception: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
-          "line": 1,
-          "message": 2,
-          "file": 3
+          "regexp": "^\\s*Liquid Exception: Liquid (?:syntax )?error \\((.*) line ([0-9]{1,})\\): (.*)$",                
+          "line": 2,
+          "message": 3,
+          "file": 1
         }
       },
       {
