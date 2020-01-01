@@ -40,7 +40,6 @@ For example, a Jekyll project might define the following tasks in
       "label": "Build",
       "type": "shell",
       "command": "bundle exec jekyll build",
-      "group": "build",
       "problemMatcher": ["$jekyll-error", "$jekyll-warning"],
       "group": {
         "kind": "build",
